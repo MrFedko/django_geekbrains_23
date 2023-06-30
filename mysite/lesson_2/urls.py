@@ -1,8 +1,9 @@
 from django.urls import path
 
-from lesson_2.views import go_to_template, hello
+from lesson_2 import views
 
 urlpatterns = [
-    path('', hello),
-    path('<str:template>', go_to_template)
+    path('', views.index, name="index"),
+    path('news/', views.news),
+    path('courses_list/', views.courses_list),
 ]

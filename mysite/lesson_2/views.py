@@ -4,8 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def check_kwargs(request, **kwargs):
-    return HttpResponse(f"kwargs: {kwargs}")
+def go_to_template(request, template: str):
+    return render(request, f'lesson_2/{template}')
 
 
 def hello(request):

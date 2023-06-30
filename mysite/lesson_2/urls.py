@@ -1,8 +1,8 @@
 from django.urls import path
 
-from lesson_2.views import check_kwargs, hello
+from lesson_2.views import go_to_template, hello
 
 urlpatterns = [
     path('', hello),
-    path('<str:word>', check_kwargs)
+    path('<str:template>', go_to_template)
 ]
